@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><style>
+body { font-family: system-ui, sans-serif; width: 300px; padding: 12px; }
+#dot { display:inline-block; width:10px; height:10px; border-radius:50%; background:#c00; margin-right:6px; }
+#dot.on { background:#0a0; }
+button { margin:4px 4px 0 0; }
+pre { background:#f4f4f4; padding:6px; font-size:11px; max-height:180px; overflow:auto; }
+</style></head>
+<body>
+<h3><span id="dot"></span>Connect Openly</h3>
+<div id="status">checking bridge…</div>
+<div id="srv">server: checking…</div>
+<div>
+  <button id="bStart">▶ Start server</button>
+  <button id="bStop">■ Stop server</button>
+</div>
+<div>
+  <button id="bTabs">List tabs</button>
+  <button id="bShot">Screenshot active tab</button>
+</div>
+<pre id="out"></pre>
+<script src="popup.js"></script>
+</body>
+</html>
