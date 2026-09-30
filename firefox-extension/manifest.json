@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "Connect Openly",
+  "version": "0.1.2",
+  "description": "Let any CLI AI agent control Firefox via a local bridge (tabs, a11y tree, clicks, typing, screenshots, console, network).",
+  "data_collection_permissions": {
+    "required": [
+      "none"
+    ]
+  },
+  "applications": {
+    "gecko": {
+      "id": "connect-openly@example.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "webRequest",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Connect Openly"
+  }
+}
