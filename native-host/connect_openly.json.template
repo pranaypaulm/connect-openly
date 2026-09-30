@@ -1,0 +1,7 @@
+{
+  "name": "connect_openly",
+  "description": "Connect Openly bridge manager (start/stop local server)",
+  "path": "__HOST_PATH__",
+  "type": "stdio",
+  "allowed_extensions": ["connect-openly@example.com"]
+}
